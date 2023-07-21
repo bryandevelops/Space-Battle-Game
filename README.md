@@ -29,15 +29,15 @@ Here is a quick demonstration of the game in action.
 
 1. ###### Game Start
 
-![Image 1](assets/image-1.jpeg)
+![Image 1](assets/image-1.png)
 
 2. ###### Player Win
 
-![Image 1](assets/image-2.jpeg)
+![Image 1](assets/image-2.png)
 
 3. ###### Player Lose
 
-![Image 1](assets/image-3.jpeg)
+![Image 1](assets/image-3.png)
 
 ## Enjoy!
 
