@@ -52,7 +52,7 @@ class PlayerShip extends Ship {
         alienHeadingEle.textContent = "Alien Ship (Remaining: 0)"
         alienHullEle.textContent = "Hull Integrity: 0"
         alienFirepowerEle.textContent = "Ship Firepower: 0"
-        alienAccuracyEle.textContent = "Targetting System: 0%"
+        alienAccuracyEle.textContent = "Targeting System: 0%"
         alienActionMsgEle.textContent = "💀💀💀💀💀💀";
         attackBtn.classList.remove("slide-btn-in");
         attackBtn.classList.add("slide-btn-out");
@@ -67,7 +67,7 @@ class PlayerShip extends Ship {
     youLose() {
         playerHullEle.textContent = "Hull Integrity: 0"
         playerFirepowerEle.textContent = "Ship Firepower: 0"
-        playerAccuracyEle.textContent = "Targetting System: 0%"
+        playerAccuracyEle.textContent = "Targeting System: 0%"
         playerActionMsgEle.textContent = "😵 Hull Breached. You Lose!"
         const aliens = [];
             for (let i = 0; i < alienShips.length; i++) {
@@ -164,12 +164,12 @@ function init() {
     playerHeadingEle.textContent = "Normandy SR-1";
     playerHullEle.textContent = `Hull Integrity: ${playerShip.hull}`;
     playerFirepowerEle.textContent = `Ship Firepower: ${playerShip.firepower}`;
-    playerAccuracyEle.textContent = `Targetting Systems: ${playerShip.accuracy * 100}%`;
+    playerAccuracyEle.textContent = `Targeting Systems: ${playerShip.accuracy * 100}%`;
     playerActionMsgEle.textContent = "🧑‍🚀 🚀";
     alienHeadingEle.textContent = `Alien Ship (Remaining: ${numOfAliens})`;
     alienHullEle.textContent = `Hull Integrity: ${alienShips[0].hull}`;
     alienFirepowerEle.textContent = `Ship Firepower: ${alienShips[0].firepower}`;
-    alienAccuracyEle.textContent = `Targetting Systems: ${alienShips[0].accuracy * 100}%`;
+    alienAccuracyEle.textContent = `Targeting Systems: ${alienShips[0].accuracy * 100}%`;
     alienActionMsgEle.textContent = "👽 🛸";
     attackBtn.textContent = "Attack"
     retreatBtn.textContent = "Retreat"
@@ -234,7 +234,7 @@ attackBtn.addEventListener("click", function() {
                 alienHeadingEle.textContent = `Alien Ship (Remaining: ${alienShips.length})`
                 alienHullEle.textContent = `Hull Integrity: ${alienShips[0].hull}`
                 alienFirepowerEle.textContent = `Ship Firepower: ${alienShips[0].firepower}`
-                alienAccuracyEle.textContent = `Targetting System: ${alienShips[0].accuracy * 100}%`
+                alienAccuracyEle.textContent = `Targeting System: ${alienShips[0].accuracy * 100}%`
                 attackBtn.textContent = "Attack"
                 retreatBtn.textContent = "Retreat"
                 retreatBtn.classList.add("slide-btn-in");
