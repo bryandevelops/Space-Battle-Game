@@ -1,7 +1,3 @@
-// Background audio
-const mySound = new Audio("backgroundAudio.mp3")
-mySound.play()
-
 /////////////
 // CLASSES //
 /////////////
@@ -18,7 +14,6 @@ class Ship {
 // The PlayerShip will have the same properties of Ship, but different methods from AlienShip
 class PlayerShip extends Ship {
     attack(alienShip) {
-
         if (this.accuracy > Math.random()) {
             alienShip.hull -= this.firepower;
             alienHullEle.textContent = `Hull Integrity: ${alienShip.hull < 0 ? 0 : alienShip.hull}`
@@ -31,31 +26,7 @@ class PlayerShip extends Ship {
 
         attackBtn.textContent = "End Turn";
 
-        return;        
-        
-        if (alienShip.hull > 0) {
-            alert("The alien ship is still alive.");
-            alienShip.attack(this);
-        } else {
-            alienShips.shift(alienShips[0])
-
-            alert("The alien ship has been destroyed.");
-            
-            if (alienShips.length) {
-                let userInput;
-                userInput = window.prompt("Would you like to continue the Attack, or Retreat?").toLowerCase();
-            } else {
-                playerShip.youWin();
-                return;
-            }
-
-            if (userInput === "attack") {
-                alert("You're locked onto the next alien target.");
-                this.attack(alienShips[0]);
-            } else {
-                this.retreat();
-            }
-        }
+        return;
     }
 
     // The user retreats if he chooses to retreat when prompted for input
@@ -116,7 +87,7 @@ class PlayerShip extends Ship {
 // The AlienShip will have the same properties of Ship, but different methods from PlayerShip
 class AlienShip extends Ship {
     attack(playerShip) {
-          if (this.accuracy > Math.random()) {
+        if (this.accuracy > Math.random()) {
             playerShip.hull -= this.firepower;
             playerHullEle.textContent = `Hull Integrity: ${playerShip.hull < 0 ? 0 : playerShip.hull}`
             handleActionMessage(this, "✅ Hit")
@@ -145,6 +116,9 @@ const numOfAliens = 6; // prompt the user for a number later
 
 // An array where all alien ships will be stored
 let alienShips = [];
+
+// Background audio
+const mySound = new Audio("assets/backgroundAudio.mp3")
 
 
 //////////////////
@@ -219,12 +193,12 @@ function handleActionMessage(ship, message) {
 }
 
 
-
 /////////////////////
 // EVENT LISTENERS //
 /////////////////////
 
 startGameBtn.addEventListener("click", function() {
+    mySound.play()
     if (startGameBtn.textContent === "Start Game") {
         init();
         startGameBtn.classList.add("slide-btn-out");
@@ -237,7 +211,6 @@ startGameBtn.addEventListener("click", function() {
         attackBtn.classList.remove("slide-btn-out");
         attackBtn.classList.add("slide-btn-in");
     }
-
 })
 
 attackBtn.addEventListener("click", function() {
@@ -245,9 +218,7 @@ attackBtn.addEventListener("click", function() {
         playerShip.attack(alienShips[0]);
         retreatBtn.classList.remove("slide-btn-in");
         retreatBtn.classList.add("slide-btn-out");
-
     } else if (attackBtn.textContent === "End Turn") {
-
         if (alienShips[0].hull > 0) {
             retreatBtn.textContent = "Defend";
             retreatBtn.classList.add("slide-btn-in");
@@ -278,9 +249,7 @@ attackBtn.addEventListener("click", function() {
                 playerShip.youWin()
             }
         }
-
     }
-
 })
 
 retreatBtn.addEventListener("click", function() {
@@ -303,25 +272,3 @@ retreatBtn.addEventListener("click", function() {
         }
     }
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-const handleTransition = function() {
-    if (shipContainer.classList.contains("ship-container-hidden")) {
-        shipContainer.style.display = "none";
-    }
-}
-
-shipContainer.addEventListener("transitionend", handleTransition);
-*/
