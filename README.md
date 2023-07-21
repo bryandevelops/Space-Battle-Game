@@ -1,4 +1,4 @@
-# Space Battle
+# [Space Battle](https://bryandevelops.github.io/Space-Battle-Game/)
 
 #### Description
 **Space Battle** is a simple space game played in the browser, where players are tasked with eliminating the threat of an incoming Alien Fleet. 
@@ -23,22 +23,22 @@ There are six alien ships. The aliens' weakness is that they are too logical and
 
 Here is a quick demonstration of the game in action.
 
-*insert*
+![Demo 1](assets/demo.gif)
 
 ## Images
 
 1. ###### Game Start
 
-*insert*
+![Image 1](assets/image-1.jpeg)
 
 2. ###### Player Win
 
-*insert*
+![Image 1](assets/image-2.jpeg)
 
 3. ###### Player Lose
 
-*insert*
+![Image 1](assets/image-3.jpeg)
 
 ## Enjoy!
 
-*insert*
+[Give it a try!](https://bryandevelops.github.io/Space-Battle-Game/)
