@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 84%, rgba(9,30,121,1) 92%, rgba(0,4,255,1) 100%);
+    background-attachment: fixed;
+    overflow-y: hidden;
+}
+
+#title {
+    color: white;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    font-size: 4rem;
+    margin-top: 20px;
+}
+
+.start-button-container {
+    /* width: fit-content;
+    margin: 0 auto; */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    width: 240px;
+    height: 100px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(255,255,255,0.1);
+    color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+.attack-button, .retreat-button {
+    transform: translateY(1000%);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgb(255,255,255,0.2);
+}
+
+.slide-btn-out {
+    transform: translateY(1000%);
+    transition:  2s;
+}
+
+.slide-btn-in {
+    transform: translateY(0%);
+    transition: transform 1s;
+}
+
+.ship-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 80px 0;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.ship-container-hidden {
+    opacity: 0;
+}
+
+.player-ship-container {
+    width: 500px;
+    height: 500px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.alien-ship-container {
+    width: 500px;
+    height: 500px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.hidden {
+    display: none;
+}
+
+#player-img {
+    height: 150px;
+}
+
+#alien-img {
+    height: 150px;
+}

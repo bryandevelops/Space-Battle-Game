@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Space Battle</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script defer src="app.js"></script>
+    </head>
+    <body>
+        <h1 id="title">spacebattle</h1>
+        <!-- <div class="ship-container " > -->
+        <div class="ship-container ship-container-hidden">
+            <div class="player-ship-container">
+                <h1 id="player-heading">Normandy SR-1</h1>
+                <img id="player-img" src="normandy.png" alt="Normandy SR-1 Space Ship">
+                <div id="player-ship-status">
+                    <p id="player-hull" class="status-message">Hull Integrity: 1</p>
+                    <p id="player-firepower" class="status-message">Ship Firepower: 1</p>
+                    <p id="player-accuracy" class="status-message">Targetting System: 10%</p>
+                </div>
+                <p id="player-action-message" class="action-message">🧑‍🚀 🚀</p>
+            </div>
+            <div class="alien-ship-container">
+                <h1 id="alien-heading">Alien Ship (Remaining: 6)</h1>
+                <img id="alien-img" src="phantom.png" alt="Phantom Alien Space Ship" srcset="">
+                <div id="alien-ship-status">
+                    <p id="alien-hull" class="status-message">Hull Integrity: 1</p>
+                    <p id="alien-firepower" class="status-message">Ship Firepower: 1</p>
+                    <p id="alien-accuracy" class="status-message">Targetting System: 10%</p>
+                </div>
+                <p id="alien-action-message" class="action-message">👽 🛸</p>
+            </div>
+        </div>
+        <div class="start-button-container">
+            <button class="attack-button">Attack</button>
+            <button class="start-button">Start Game</button>
+            <button class="retreat-button">Retreat</button>
+        </div>
+    </body>
+</html>
